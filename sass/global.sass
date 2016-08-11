@@ -1,0 +1,92 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****           GLOBAL MANIFEST           ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  This manifest imports all of the individual SCSS modules together ready
+//  to compile into a single CSS file (/build/css/global.css).
+//
+//  It is recommended that you customise the loadout of your project by
+//  removing any libary modules that will not be used.
+//
+//  [_1_] CONFIG
+//  [_2_] DEFAULTS
+//  [_3_] LIBRARY
+//  [_4_] PARTIALS
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_1_] CONFIG  //
+
+//  The project config file is the home of all those settings that get used
+//  over and over again, like type and color preferences.
+
+@import "_config"
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_2_] DEFAULTS  //
+
+//  These are the files that make up the foundation of your project. They can
+//  be removed if you choose to, however this may cause dependent library module(s)
+//  to fail and thus your project will not compile.
+
+//  Vendor
+@import "_default/vendor/reset.sass"
+@import "_default/vendor/mixins.sass"
+@import "_default/vendor/variables.sass"
+@import "_default/vendor/generated-variables.sass"
+
+//  Modules
+@import "_default/modules/container.sass"
+
+//  Typography
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700)
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700)
+@import "_default/typography/type.sass"
+@import "_default/typography/buttons.sass"
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_3_] LIBRARY  //
+
+//  The library modules add optional functionality to you project. If you don't
+//  need a particular module, remove that line or comment it out.
+//
+//  Basic modules require little or no additional scripts or markup in order
+//  to be used successfully in projects. Advanced modules require further setup
+//  and/or additional scripts in order to work.
+
+//  Basic Library Modules
+@import "_library/grid.sass"
+
+//  Advanced Library Modules
+@import "_library/cookies.sass"
+
+//  General Defaults - These are not the foundation defaults above.
+@import "_library/_default.sass"
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_4_] PARTIALS  //
+
+//  Partial files are for project specfic styling. Common ones have been created
+//  and left empty. Add more as required.
+
+@import "_partials/header.sass"
+@import "_partials/nav.sass"
+@import "_partials/hero.sass"
+@import "_partials/section.sass"
+@import "_partials/article.sass"
+@import "_partials/aside.sass"
+@import "_partials/footer.sass"
+@import "_partials/media.sass"
+@import "_partials/forms.sass"

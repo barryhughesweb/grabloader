@@ -1,0 +1,286 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****                GRID                 ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  Adaption of CSS Bulma Framework
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+.grid
+  margin-left: -$gutter
+  &.is-mobile
+    +flex
+  &.is-gapless
+    margin-left: 0px !important
+    & > .grid-item
+      margin: 0
+      padding: 0
+  &.is-narrow
+    margin-left: -$gutter / 2 !important
+    & > .grid-item
+      padding-left: $gutter / 2
+  &.is-wide
+    margin-left: -$gutter * 2 !important
+    & > .grid-item
+      padding-left: $gutter * 2
+  &.is-multiline
+    flex-wrap: wrap
+  +tablet
+    &:not(.is-desktop)
+      +flex
+  +desktop
+    &.is-desktop
+      +flex
+
+.grid-item
+  -webkit-box-flex: 1
+  -moz-box-flex: 1
+  -webkit-flex: 1
+  -ms-flex: 1
+  flex: 1
+  padding-left: $gutter
+  .columns.is-mobile > &.as-needed
+    flex: none
+  .grid-item.is-mobile > &.is-whole
+    flex: none
+    width: 100%
+  .grid-item.is-mobile > &.is-half
+    flex: none
+    width: 50%
+  .grid-item.is-mobile > &.is-third
+    flex: none
+    width: 33.333%
+  .grid-item.is-mobile > &.is-two-thirds
+    flex: none
+    width: 66.666%
+  .grid-item.is-mobile > &.is-quarter
+    flex: none
+    width: 25%
+  .grid-item.is-mobile > &.is-fifth
+    flex: none
+    width: 20%
+  .grid-item.is-mobile > &.is-sixth
+    flex: none
+    width: 16.666%
+  .grid-item.is-mobile > &.is-eighth
+    flex: none
+    width: 12.5%
+  .grid-item.is-mobile > &.is-offset-half
+    margin-left: 50% !important
+  .grid-item.is-mobile > &.is-offset-third
+    margin-left: 33.3333% !important
+  .grid-item.is-mobile > &.is-offset-quarter
+    margin-left: 25% !important
+  .grid-item.is-mobile > &.is-offset-fifth
+    margin-left: 20% !important
+  .grid-item.is-mobile > &.is-offset-sixth
+    margin-left: 16.666% !important
+  @for $i from 1 through 11
+    .grid-item.is-mobile > &.is-#{$i}-mobile
+      flex: none
+      width: ($i / 12) * 100%
+    .grid-item.is-mobile > &.is-offset-#{$i}
+      margin-left: ($i / 12) * 100%
+  +mobile
+    &.as-needed-mobile
+      flex: none
+    &.is-whole-mobile
+      flex: none
+      width: 100%
+    &.is-half-mobile
+      flex: none
+      width: 50%
+    &.is-third-mobile
+      flex: none
+      width: 33.333%
+    &.is-two-thirds-mobile
+      flex: none
+      width: 66.666%
+    &.is-quarter-mobile
+      flex: none
+      width: 25%
+    &.is-fifth-mobile
+      flex: none
+      width: 20%
+    &.is-two-fifths-mobile
+      flex: none
+      width: 40%
+    &.is-three-fifths-mobile
+      flex: none
+      width: 60%
+    &.is-sixth-mobile
+      flex: none
+      width: 16.666%
+    &.is-four-sixths-mobile
+      flex: none
+      width: 66.664%
+    &.is-eighth-mobile
+      flex: none
+      width: 12.5%
+    &.is-tenth-mobile
+      flex: none
+      width: 10%
+    &.is-twelfth-mobile
+      flex: none
+      width: 10%
+    &.is-offset-half-mobile
+      margin-left: 50% !important
+    &.is-offset-third-mobile
+      margin-left: 33.3333% !important
+    &.is-offset-quarter-mobile
+      margin-left: 25% !important
+    &.is-offset-fifth-mobile
+      margin-left: 20% !important
+    &.is-offset-sixth-mobile
+      margin-left: 16.666% !important
+    @for $i from 1 through 11
+      &.is-#{$i}-mobile
+        flex: none
+        width: ($i / 12) * 100%
+      &.is-offset-#{$i}-mobile
+        margin-left: ($i / 12) * 100%
+  +tablet
+    &.as-needed,
+    &.as-needed-tablet
+      flex: none
+    &.is-whole,
+    &.is-whole-tablet
+      flex: none
+      width: 100%
+    &.is-half,
+    &.is-half-tablet
+      flex: none
+      width: 50%
+    &.is-third,
+    &.is-third-tablet
+      flex: none
+      width: 33.333%
+    &.is-two-thirds,
+    &.is-two-thirds-tablet
+      flex: none
+      width: 66.666%
+    &.is-quarter,
+    &.is-quarter-tablet
+      flex: none
+      width: 25%
+    &.is-fifth,
+    &.is-fifth-tablet
+      flex: none
+      width: 20%
+    &.is-two-fifths,
+    &.is-two-fifths-tablet
+      flex: none
+      width: 40%
+    &.is-three-fifths,
+    &.is-three-fifths-tablet
+      flex: none
+      width: 60%
+    &.is-sixth,
+    &.is-sixth-tablet
+      flex: none
+      width: 16.666%
+    &.is-four-sixths,
+    &.is-four-sixths-tablet
+      flex: none
+      width: 66.664%
+    &.is-eighth,
+    &.is-eighth-tablet
+      flex: none
+      width: 12.5%
+    &.is-tenth,
+    &.is-tenth-tablet
+      flex: none
+      width: 10%
+    &.is-twelfth,
+    &.is-twelfth-tablet
+      flex: none
+      width: 10%
+    &.is-offset-half,
+    &.is-offset-half-tablet
+      margin-left: 50% !important
+    &.is-offset-third,
+    &.is-offset-third-tablet
+      margin-left: 33.3333% !important
+    &.is-offset-two-thirds,
+    &.is-offset-two-thirds-tablet
+      margin-left: 66.6666% !important
+    &.is-offset-quarter,
+    &.is-offset-quarter-tablet
+      margin-left: 25% !important
+    &.is-offset-fifth,
+    &.is-offset-fifth-tablet
+      margin-left: 20% !important
+    &.is-offset-sixth,
+    &.is-offset-sixth-tablet
+      margin-left: 16.666% !important
+    @for $i from 1 through 11
+      &.is-#{$i},
+      &.is-#{$i}-tablet
+        flex: none
+        width: ($i / 12) * 100%
+      &.is-offset-#{$i},
+      &.is-offset-#{$i}-tablet
+        margin-left: ($i / 12) * 100%
+  +desktop
+    &.as-needed-desktop
+      flex: none
+    &.is-whole-desktop
+      flex: none
+      width: 100%
+    &.is-half-desktop
+      flex: none
+      width: 50%
+    &.is-third-desktop
+      flex: none
+      width: 33.333%
+    &.is-two-thirds-desktop
+      flex: none
+      width: 66.666%
+    &.is-quarter-desktop
+      flex: none
+      width: 25%
+    &.is-fifth-desktop
+      flex: none
+      width: 20%
+    &.is-two-fifths-desktop
+      flex: none
+      width: 40%
+    &.is-three-fifths-desktop
+      flex: none
+      width: 60%
+    &.is-sixth-desktop
+      flex: none
+      width: 16.666%
+    &.is-four-sixths-desktop
+      flex: none
+      width: 66.664%
+    &.is-eighth-desktop
+      flex: none
+      width: 12.5%
+    &.is-tenth-desktop
+      flex: none
+      width: 10%
+    &.is-twelfth-desktop
+      flex: none
+      width: 10%
+    &.is-offset-half-desktop
+      margin-left: 50% !important
+    &.is-offset-third-desktop
+      margin-left: 33.3333% !important
+    &.is-offset-quarter-desktop
+      margin-left: 25% !important
+    &.is-offset-three-quarters-desktop
+      margin-left: 75% !important
+    &.is-offset-fifth-desktop
+      margin-left: 20% !important
+    &.is-offset-sixth-desktop
+      margin-left: 16.666% !important
+    @for $i from 1 through 11
+      &.is-#{$i}-desktop
+        flex: none
+        width: ($i / 12) * 100%
+      &.is-offset-#{$i}-desktop
+        margin-left: ($i / 12) * 100%

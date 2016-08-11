@@ -1,0 +1,5 @@
+/*-----Welcome to the Editor File-----*/
+/*-----These styles will be loaded for chaning the styling for the TinyMCE filter.-----*/
+p.note {
+  font-weight: bold;
+}

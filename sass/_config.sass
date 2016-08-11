@@ -1,0 +1,164 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****           PROJECT CONFIG            ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  Think of this file as the project mothership. It contains all of the
+//  variables that get used over and over again in your CSS.
+//
+//  Some variables have a default value specified in '_default/base/var.scss'
+//  These defaults are shown in the comment following the value.
+//
+//  [_1_] TYPOGRAPHY
+//  [_2_] COLORS
+//  [_3_] GRID
+//  [_4_] BREAKPOINTS
+//  [_5_] PATHS
+//  [_6_] MISCELLANEOUS
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_1_] TYPOGRAPHY  //
+
+//  Set your font families here, including fallbacks. Only '$font1' is required.
+
+$font1:  'PT Sans', sans-serif  // 'Source Sans Pro', sans-serif
+$font2:  'Montserrat', sans-serif
+
+$mono:   null  // 'Courier', monospace
+
+//  Type sizes are defined in rems with a pixel fallback. To make the math
+//  easier, the font size is set so that 1rem == 10px. Variable values should
+//  de defined here without the unit.
+
+$font-base: 1.4  // 1.6
+
+$font-small:  null  // 1.2
+$font-medium: null  // 1.6
+$font-large:  null  // 2
+
+$h1: null  // 2.6
+$h2: null  // 2.4
+$h3: null  // 2.2
+$h4: null  // 2
+$h5: null  // 1.8
+$h6: null  // 1.6
+
+//  Line height is also defined in rems with a pixel fallback. In this instance
+//  1rem = 100% of the current font size.
+
+$line-height: null  // 1.5
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_2_] COLORS  //
+
+//  The main project colors are specified here. Only '$color1' is required.
+//
+//  British users can put the world to rights and use the Queen's English.
+//  EG. '$color1' = '$colour1' and '$light-gray' = '$light-grey'
+
+$font-color: #161948 //#333
+
+$color1: #161948  // #499309
+$color2: #10133b  // #3c7b06
+$color3: #dc4128
+
+$white:     null // #fff
+$black:     null // #000
+$blue:      null // #42afe3
+$green:     null // #97cd76
+$orange:    null // #f68b39
+$purple:    null // #847bb9
+$red:       null // #ed6c63
+$turquoise: null // #1fc8db
+$yellow:    null // #fce473
+
+$gray-lighter: null // #f5f7fa
+$gray-light:   null // #d3d6db
+$gray:         null // #aeb1b5
+$gray-dark:    null // #666666
+$gray-darker:  null // #333
+
+//  These are notification colors, they are used in things like pop-ups
+//  and contact forms.
+
+$notify-failed:  null  // #be4c4c
+$notify-warning: null  // #eac282
+$notify-success: null  // #8cc36e
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_3_] GRID  //
+
+//  Set the gutter between your columns. This can be specified in px or ems.
+
+$gutter: null  // 24px
+
+//  There a three default container widths. Specify these in px or ems.
+
+$container-small:   null  // 670px  | .container--small
+$container-default: null  // 960px  | .container
+$container-large:   null  // 1024px | .container--large
+$container-xlarge:  null  // 1250px | .container--xlarge
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_4_] BREAKPOINTS  //
+
+//  Breakpoint values are used for both the grid system and the media queries
+//  mixin. Three values give us four available breakpoints:
+
+//  =mobile
+//    @media screen and (max-width: $tablet - 1px)
+//      @content
+//
+//  =tablet
+//    @media screen and (min-width: $tablet)
+//      @content
+//
+//  =touch
+//    @media screen and (max-width: $desktop - 1px)
+//      @content
+//
+//  =desktop
+//    @media screen and (min-width: $desktop)
+//      @content
+
+//  For more information on using the grid system or media query mixin, please
+//  view the project documentation
+
+$mobile:  null  // 500px
+$tablet:  null  // 800px
+$desktop: null  // 1024px
+$mac: null  // 1190px
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_5_] PATHS  //
+
+//  These give you quick access to other directory files such as images and fonts.
+//  Paths should be relative to the compiled CSS file.
+
+$dir-root: null  // '../../'
+$dir-img:  null  // '../../img/'
+$dir-font: null  // '../../fonts/'
+
+//  [_6_] MISCELLANEOUS  //
+
+//  These are variables that can be used to keep the "details" consitant.
+
+$easing: null // ease-out
+$radius: 4px // 2px
+$speed:  null // 0.3s

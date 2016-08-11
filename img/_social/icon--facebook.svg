@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>icon--social--facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon--social">
+            <rect id="Rectangle-1" fill="#3B5998" x="0" y="0" width="48" height="48"></rect>
+            <path d="M20.7874764,17.1479915 L20.7874764,20.45229 L18.3666417,20.45229 L18.3666417,24.492799 L20.7874764,24.492799 L20.7874764,36.4997708 L25.7603848,36.4997708 L25.7603848,24.4931337 L29.0974372,24.4931337 C29.0974372,24.4931337 29.4099668,22.5557406 29.5614608,20.4373917 L25.779189,20.4373917 L25.779189,17.674733 C25.779189,17.2618212 26.3213868,16.7063991 26.8572793,16.7063991 L29.5667059,16.7063991 L29.5667059,12.5 L25.8828076,12.5 C20.6645515,12.499721 20.7874764,16.5442475 20.7874764,17.1479915 L20.7874764,17.1479915 Z" id="Facebook" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

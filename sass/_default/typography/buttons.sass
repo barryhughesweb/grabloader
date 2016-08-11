@@ -1,0 +1,145 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****               BUTTONS               ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  There are two basic button styles; regular and ghost. These can be modified
+//  to produce a range of different outcomes.
+//
+//  USAGE: .button
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+.button
+  +inline-block
+  background: $color1
+  color: $white
+  padding: 8px $gutter / 2
+  border-radius: $radius
+  text-align: center
+  border: 2px solid $color1
+  cursor: pointer
+  font-weight: 600
+  text-transform: uppercase
+  
+  +transition(all $speed $easing)
+  
+  &:hover
+    color: $white
+    background: darken($color1, 5)
+    border-color: darken($color1, 5)
+    
+    +transition(all $speed $easing)
+  
+  //  There are three available size modifiers: large, small and full width.
+  //
+  //  USAGE: .button is-large
+  
+  &.is-large
+    @extend .button
+    padding: $gutter
+  
+  &.is-small
+    @extend .button
+    +font-size($font-small)
+  
+  &.is-full
+    @extend .button
+    display: block !important
+  
+  //  There are also two style modifiers; Rounded adds round corners to the
+  //  button, while Subtle makes the button greyscale.
+  //
+  //  USAGE: .button .is-round
+  
+  &.is-round
+    width: 36px
+    height: 36px
+    border-radius: 50%
+    border: none
+    +svg(icon--arrow)
+    background-position: center
+    background-size: 18px 18px
+    background-repeat: no-repeat
+    background-color: $colour1
+    +transition(all $speed $easing)
+    +card(2)
+    &:hover
+      background-color: $colour2
+      +transition(all $speed $easing)
+  
+  &.is-more
+    width: 36px
+    height: 36px
+    border-radius: 50%
+    border: none
+    +svg(icon--more)
+    background-position: center
+    background-size: 20px 20px
+    background-repeat: no-repeat
+    background-color: $colour1
+    +transition(all 0.3s ease)
+    +card(2)
+    &:hover
+      background-color: $colour2
+      +transition(all $speed $easing)
+  
+  &.is-subtle
+    @extend .button
+    background: $gray-light
+    color: darken($gray-light, 40)
+    border-color: darken($gray-light, 15)
+    
+    &:hover
+      color: darken($gray-light, 40)
+      background: darken($gray-light, 5)
+      border-color: darken($gray-light, 20)
+  
+  //  Ghost Button Styles - uses the same modifiers as the regular button style
+  //  with the exception of the 'subtle' modifier.
+  
+  &.is-ghost
+    +inline-block
+    padding: 8px $gutter / 2
+    border-radius: $radius
+    text-align: center
+    background: none
+    color: $color1
+    border: 2px solid $color1
+    text-transform: uppercase
+    +transition(all $speed $easing)
+    &:hover
+      +transition(all $speed $easing)
+      background: $color1
+      color: white
+      border-color: darken($color1, 5)
+    
+    &.btn--subtle
+      border-color: darken($gray-light, 20)
+      color: darken($gray-light, 20)
+  
+  &.is-invert
+    +inline-block
+    padding: 8px $gutter / 2
+    border-radius: $radius
+    text-align: center
+    background: none
+    color: $white
+    border: 2px solid $color1
+    text-transform: uppercase
+    +transition(all $speed $easing)
+    &:hover
+      background: $color1
+      color: white
+      border-color: darken($color1, 5)
+      +transition(all $speed $easing)
+  
+  &.no-radius
+    border-radius: 0px !important
+
+a.addthis_button
+  border: none
+  img
+    margin: 0px

@@ -1,0 +1,187 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****                FORMS                ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  [_1_] BASIC STYLES  //
+
+input[type="text"],
+input[type="password"], 
+input[type="email"],
+input[type="search"],
+input[type="number"],
+input[type="file"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select
+  +font-size($font-base)
+  
+  font-family: $font1
+  width: 100%
+  padding: 8px 10px
+  color: $colour1
+  border: 2px solid $gray-light
+  border-radius: $radius
+  margin-bottom: $gutter / 2
+  position: relative
+  z-index: 2
+  background: none
+  +transition(all 0.3s ease)
+  
+  -webkit-appearance: none
+  -moz-appearance: none
+  
+  &:focus
+    outline: none
+    border: 2px solid $colour2
+    color: $colour2
+  
+  &.filled
+    &:valid
+      color: $notify-success !important
+      border: 2px solid $notify-success !important
+      +transition(all $speed $easing)
+    &:invalid
+      color: $notify-warning !important
+      border: 2px solid $notify-warning !important
+      +transition(all $speed $easing)
+
+textarea
+  max-width: 100%
+  min-width: 100%
+  min-height: 200px
+
+select
+  box-shadow: none
+  +svg(_library/select-arrow)
+  background-size: 17px auto
+  background-position: right 20px top 13px
+  background-repeat: no-repeat
+  position: relative
+  z-index: 2
+  color: $grey
+  
+  &:focus
+    outline: none
+    border: 2px solid $gray
+
+.check
+  display: none
+
+input[type="submit"],
+button
+  @extend .button
+  padding: $gutter $gutter
+  +font-size($font-medium)
+  text-transform: uppercase
+  margin-bottom: $gutter
+  font-weight: 700
+  border: 2px $colour1 solid
+  color: $colour1
+  &:hover
+    background: $notify-success
+    color: white
+    border-color: darken($notify-success, 10%)
+    +transition(all $speed $easing)
+  
+  +transition(all $speed $easing)
+  background: none
+  font-family: $font1
+  cursor: pointer
+  -webkit-appearance: none
+  -moz-appearance: none
+
+
+//  [_2_] GRAVITY FORM STYLES  //
+
+.gform_body
+  ul
+    list-style-type: none
+    margin-left: 0px
+    li
+      margin-bottom: 0px
+  .gform_validation_container
+    display: none
+  .ginput_container
+    input
+      width: 100%
+  .gfield_description
+    display: none
+  .hidden_label
+    label
+      display: none
+
+.gform_footer
+  +clearfix
+
+// Callback Form
+
+#gform_wrapper_2
+  .ginput_container
+    input
+      background-color: rgba($white, 1)
+      border: 1px solid $white
+      font-weight: 700
+  ::-webkit-input-placeholder
+    color: $colour1
+
+  :-moz-placeholder
+    color: $colour1
+
+  ::-moz-placeholder
+    color: $colour1
+
+  :-ms-input-placeholder 
+    color: $colour1
+  
+  input[type="submit"],
+  button
+    @extend .button
+    float: right
+    padding: $gutter / 3 $gutter / 2
+    margin-bottom: 0
+    background-color: $colour3
+    font-family: $font1
+    +font-size($font-medium)
+    text-transform: uppercase
+    font-weight: 700
+    border: 2px $colour3 solid
+    color: $white
+    cursor: pointer
+    -webkit-appearance: none
+    -moz-appearance: none
+    +transition(all $speed $easing)
+    &:hover
+      background: darken($colour3, 15%)
+      color: white
+      border-color: darken($colour3, 25%)
+      +transition(all $speed $easing)
+
+// Enquiry Form
+
+#gform_wrapper_1
+  margin-top: $gutter * 2
+  ul
+    flex-wrap: wrap
+    margin-left: -$gutter
+    +tablet
+      +flex
+    li
+      flex: none
+      width: 100%
+      padding-left: $gutter
+      margin-bottom: $gutter / 2
+      font-weight: 700
+      +tablet
+        &.is-half
+          flex: none
+          width: 50%
+  input[type="submit"],
+  button
+    &:hover
+      background: $grey-darker
+      color: white
+      border-color: $grey-darker
+      +transition(all $speed $easing)

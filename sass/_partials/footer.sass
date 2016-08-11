@@ -1,0 +1,38 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****               FOOTER                ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+footer
+  background-color: $white
+  background-image: url('#{$dir-img}crisscross.png')
+  background-repeat: repeat
+  color: $colour1
+  font-weight: 700
+  ul
+    margin: 0
+    list-style: none
+    li
+      +inline-block
+      color: $colour1
+  .is-small
+    +font-size($font-small * 0.9)
+  .logo
+    display: block
+    width: 100%
+    max-width: 150px
+    margin:  0
+    +tablet
+      margin: 0
+      float: right
+    a
+      display: block
+      padding: 0px
+      margin: 0px
+      border: none !important
+      img
+        display: block
+        width: 100%
+        height: auto
+        margin: 0

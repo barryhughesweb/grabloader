@@ -1,0 +1,94 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****                HERO                 ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+#hero
+  &.is-fullheight,
+  &.is-large
+    +tablet
+      .tabs
+        font-size: $font-medium
+  &.is-small
+    color: $white
+    .title
+      +font-size($font-large)
+      font-weight: 700
+    .subtitle
+      +font-size($font-medium)
+    .hero-content
+      padding: $gutter * 2 0
+    +tablet
+      .hero-content
+        padding: $gutter * 3 0
+    +desktop
+      .hero-content
+        padding: $gutter * 3 0
+  &.is-medium
+    color: $white
+    .title
+      +font-size($font-large)
+      font-weight: 700
+    .subtitle
+      +font-size($font-medium)
+    .hero-content
+      padding: $gutter * 4 0
+    +tablet
+      .hero-content
+        padding: $gutter * 5 0
+    +desktop
+      .hero-content
+        padding: $gutter * 5 0
+  &.is-large
+    color: $white
+    .title
+      +font-size($font-large * 2)
+      font-weight: 700
+    .subtitle
+      +font-size($font-medium)
+    .hero-content
+      padding: $gutter * 4 0
+    +tablet
+      .hero-content
+        padding: $gutter * 10 0
+    +desktop
+      .hero-content
+        padding: $gutter * 10 0
+  &.is-fullheight
+    +flex
+    align-items: stretch
+    flex-direction: column
+    justify-content: space-between
+    min-height: 100vh
+    .tabs
+      a
+        padding: 15px 20px
+    .hero-content
+      +flex
+      flex: 1
+      flex-direction: column
+      justify-content: center
+
+// Breadcrumbs
+
+#breadcrumb
+  +absolute(right 0 bottom 0)
+  padding: $gutter / 3 $gutter
+  +font-size($font-small)
+  background: rgba($white, 1)
+  color: $font-colour
+  border-top-left-radius: $radius
+  border-top-right-radius: $radius
+  a
+    color: $font-colour
+    border: none
+
+// Hero with form
+
+#hero
+  &.is-front-page, &.is-area-page, &.is-premises-page
+    border-bottom: 4px $colour3 solid
+    .callback
+      background-color: rgba($colour1, 1)
+      color: $white

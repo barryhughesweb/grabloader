@@ -1,0 +1,56 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****               HEADER                ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+header
+  background-color: $white
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(80, 80, 80, 1)
+  -moz-box-shadow: 0px 0px 12px 0px rgba(80, 80, 80, 1)
+  box-shadow: 0px 0px 12px 0px rgba(80, 80, 80, 1)
+  
+  .logo
+    display: block
+    width: 100%
+    max-width: 150px
+    margin:  0 auto $gutter * 1.5 auto
+    +tablet
+      margin: 0 $gutter / 2 $gutter 0
+      float: left
+    a
+      display: block
+      padding: 0px
+      margin: 0px
+      border: none !important
+      img
+        display: block
+        width: 100%
+        height: auto
+        margin: 0
+  
+  img.vehicles
+    display: block
+    margin: 0 auto $gutter / 2 auto
+  
+  p
+    display: block
+    color: $colour1
+    +font-size($font-medium, 2)
+    +tablet
+      +font-size($font-large, 2)
+      text-align: right
+      margin: 0
+    a
+      display: block
+      +font-size($font-medium)
+      color: $colour3
+      +tablet
+        +font-size($font-large * 1.5)
+    &.tagline
+      +font-size($font-medium * 1.25, 2.5)
+      font-weight: 700
+      color: $colour1
+      text-transform: uppercase
+      +tablet
+        padding-top: $gutter / 2.5

@@ -1,0 +1,394 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****             DEFAULTS                ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  These styles adds basic WordPress specific styling to the Calvin framework.
+
+// Alignment
+
+.is-centered
+  text-align: center
+
+.is-centered--tablet
+  +tablet
+    text-align: center !important
+
+.is-centered--desktop
+  +desktop
+    text-align: center !important
+
+.is-left
+  text-align: left
+
+.is-left--tablet
+  +tablet
+    text-align: left !important
+
+.is-left--desktop
+  +desktop
+    text-align: left !important
+
+.is-right
+  text-align: right
+
+.is-right--tablet
+  +tablet
+    text-align: right !important
+
+.is-right--desktop
+  +desktop
+    text-align: right !important
+
+// Display
+
+.has-clearfix
+  +clearfix
+
+.is-block
+  display: block
+
+.is-inline
+  display: inline
+
+.is-flex
+  +flex
+
+.is-relative
+  position: relative
+
+.no-overflow
+  overflow: hidden
+
+.has-z-index-1
+  z-index: 1
+
+.has-z-index-2
+  z-index: 2
+
+.has-z-index-3
+  z-index: 3
+
+.has-z-index-4
+  z-index: 4
+
+.has-z-index-5
+  z-index: 5
+
+// Pull
+
+.is-clearfix
+  +clearfix
+
+.is-pulled-left
+  float: left
+
+.is-pulled-right
+  float: right
+
+// Size
+
+.is-fullwidth
+  width: 100%
+
+.is-halfwidth
+  width: 100%
+  +tablet
+    width: 50%
+
+// Visibility
+
+.is-disabled
+  pointer-events: none !important
+
+.is-unselectable
+  +unselectable
+
+.hide, .hidden
+  display: none !important
+
+.is-hidden-mobile
+  +mobile
+    display: none !important
+
+.is-hidden-tablet
+  +tablet
+    display: none !important
+
+.is-hidden-touch
+  +touch
+    display: none !important
+
+.is-hidden-desktop
+  +desktop
+    display: none !important
+
+// Margin & Paddings
+
+.is-marginless
+  margin: 0 !important
+
+.has-margin--all
+  margin: $gutter !important
+
+.has-margin--top
+  margin-top: $gutter !important
+
+.has-margin--right
+  margin-right: $gutter !important
+
+.has-margin--bottom
+  margin-bottom: $gutter !important
+
+.has-margin--left
+  margin-left: $gutter !important
+
+.has-margin-all--double
+  margin: $gutter * 2 !important
+
+.has-margin-top--double
+  margin-top: $gutter * 2 !important
+
+.has-margin-right--double
+  margin-right: $gutter * 2 !important
+
+.has-margin-bottom--double
+  margin-bottom: $gutter * 2 !important
+
+.has-margin-left--double
+  margin-left: $gutter * 2 !important
+
+.has-margin-all--half
+  margin: $gutter / 2 !important
+
+.has-margin-top--half
+  margin-top: $gutter / 2 !important
+
+.has-margin-right--half
+  margin-right: $gutter / 2 !important
+
+.has-margin-bottom--half
+  margin-bottom: $gutter / 2 !important
+
+.has-margin-left--half
+  margin-left: $gutter / 2 !important
+
+.has-margin-all--triple
+  margin: $gutter * 3 !important
+
+.has-margin-top--triple
+  margin-top: $gutter * 3 !important
+
+.has-margin-right--triple
+  margin-right: $gutter * 3 !important
+
+.has-margin-bottom--triple
+  margin-bottom: $gutter * 3 !important
+
+.has-margin-bottom-triple--tablet
+  +tablet
+    margin-bottom: $gutter * 3 !important
+
+.has-margin-left--triple
+  margin-left: $gutter * 3 !important
+
+.is-marginless-top--tablet
+  +tablet
+    margin-top: 0 !important
+
+.is-marginless-bottom--tablet
+  +tablet
+    margin-bottom: 0 !important
+
+.is-paddingless
+  padding: 0 !important
+
+.has-padding--all
+  padding: $gutter !important
+
+.has-padding--top
+  padding-top: $gutter !important
+
+.has-padding--right
+  padding-right: $gutter !important
+
+.has-padding--bottom
+  padding-bottom: $gutter !important
+
+.has-padding--left
+  padding-left: $gutter !important
+
+.has-padding-all--double
+  padding: $gutter * 2 !important
+
+.has-padding-top--double
+  padding-top: $gutter * 2 !important
+
+.has-padding-right--double
+  padding-right: $gutter * 2 !important
+
+.has-padding-bottom--double
+  padding-bottom: $gutter * 2 !important
+
+.has-padding-left--double
+  padding-left: $gutter * 2 !important
+
+.has-padding-all--half
+  padding: $gutter / 2 !important
+
+.has-padding-top--half
+  padding-top: $gutter / 2 !important
+
+.has-padding-right--half
+  padding-right: $gutter / 2 !important
+
+.has-padding-bottom--half
+  padding-bottom: $gutter / 2 !important
+
+.has-padding-left--half
+  padding-left: $gutter / 2 !important
+
+.has-padding-all--triple
+  padding: $gutter * 3 !important
+
+.has-padding-top--triple
+  padding-top: $gutter * 3 !important
+
+.has-padding-right--triple
+  padding-right: $gutter * 3 !important
+
+.has-padding-bottom--triple
+  padding-bottom: $gutter * 3 !important
+
+.has-padding-left--triple
+  padding-left: $gutter * 3 !important
+
+.has-stretcher
+  padding-top: $gutter !important
+  padding-bottom: $gutter !important
+
+.has-stretcher--double
+  padding-top: $gutter * 2 !important
+  padding-bottom: $gutter * 2 !important
+
+.has-stretcher--double-odd
+  padding-top: $gutter * 2 !important
+  padding-bottom: $gutter !important
+
+.has-stretcher--triple
+  padding-top: $gutter * 3 !important
+  padding-bottom: $gutter * 3 !important
+
+.has-stretcher--triple-odd
+  padding-top: $gutter * 3 !important
+  padding-bottom: $gutter * 2 !important
+
+// Media
+
+img
+  max-width: 100%
+  height: auto
+  margin-bottom: $gutter
+  
+  &.img--center
+    display: block
+    margin: 0 auto $gutter auto
+  
+  &.img--left
+    float: left
+    margin: 0 $gutter $gutter 0
+  
+  &.img--right
+    float: right
+    margin: 0 0 $gutter $gutter
+  
+  &.aligncenter
+    display: block
+    margin: 0 auto $gutter auto
+  
+  &.alignleft
+    float: left
+    margin: 0 $gutter $gutter 0
+  
+  &.alignright
+    float: right
+    margin: 0 0 $gutter $gutter
+  
+  &.is-bordered
+    padding: $gutter / 2
+    border: 1px $grey-light solid
+  
+  @each $dimension in $dimensions
+    &.is-#{$dimension}x#{$dimension}
+      height: $dimension * 1px
+      width: $dimension * 1px
+
+// Basic Styling
+
+.has-background
+  background-position: 50% 50%
+  background-size: cover
+  background-repeat: no-repeat
+
+@each $name, $pair in $colors
+  $color: nth($pair, 1)
+  .is-#{$name}
+    background-color: rgba($color, 0.8)
+
+@each $name, $pair in $colors
+  $color: nth($pair, 1)
+  .is-#{$name}--solid
+    background-color: $color
+
+@each $name, $pair in $colors
+  $color: nth($pair, 1)
+  .is-#{$name}-colour
+    color: $color !important
+
+.is-card-1
+  +card(1)
+
+.is-card-2
+  +card(2)
+
+.is-card-3
+  +card(3)
+
+.is-card-4
+  +card(4)
+
+.is-card-5
+  +card(5)
+
+.is-borderless
+  border: none !important
+
+.has-border--bottom
+  border-bottom: 1px $grey-light solid
+
+.has-border-bottom--dashed
+  border-bottom: 1px $grey-light dashed
+
+// Tables
+
+.table
+  color: $font-strong
+  margin-bottom: 20px
+  width: 100%
+  th,
+  td
+    border: 1px solid $border
+    border-width: 0 0 1px
+    padding: 8px $gutter / 2
+    vertical-align: top
+  &.terms
+    thead
+      text-align: left
+      font-weight: 600
+  &.openingtimes
+    thead
+      background: $colour1
+      text-align: left
+      color: $white !important
+      font-weight: 600

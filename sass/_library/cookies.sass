@@ -1,0 +1,40 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****       COOKIE COMPLIANCE BANNER      ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  In the EU it is required by law for all websites to disclose any any cookies
+//  they are using in the form of an informational pop-up. This module does
+//  exactly that.
+//
+//  DEPENDENCIES: /js/_library/cookies.js
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+.cookie-banner
+  width: 100%
+  max-width: 300px
+  padding: $gutter
+  z-index: 99997
+  
+  color: darken($notify-warning, 50%)
+  background: $notify-warning
+  border: 1px solid darken($notify-warning, 15%)
+  border-radius: 2px
+  
+  +font-size($font-small)
+  position: fixed
+  bottom: 15px
+  right: 15px
+  
+  .ie8 &
+    left: 15px
+    right: auto
+    max-width: 300px
+  
+  a, a:visited, a:hover
+    color: darken($notify-warning, 35%)
+    border-bottom: 1px dotted darken($notify-warning, 35%)

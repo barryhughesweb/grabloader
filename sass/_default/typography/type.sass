@@ -1,0 +1,214 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****             TYPOGRAPHY              ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+//  All the basic type styles for any web project. Pretty straight forward stuff.
+//
+//  [_1_] BASE STYLES
+//  [_2_] LISTS
+//  [_3_] QUOTES & BLOCKQUOTES
+//  [_4_] PREFORMATTED TEXT
+//  [_5_] TYPOGRAPHIC EXTRAS
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_1_] BASE STYLES
+
+//  The <html> must use our font stack so that when we set the <body> font size
+//  rem and pixel units match up.
+
+html
+  font-family: $font1
+  font-size: 62.5%  // Important for the math to work.
+  line-height: $line-height
+  -webkit-font-smoothing: antialiased
+
+body 
+  +font-size($font-base)
+  color: $font-color
+
+.is-primary-font
+  font-family: $font1
+
+.is-secondary-font
+  font-family: $font2
+
+h1, .is-h1, h2, .is-h2, .is-h3, h3, .is-h4, h4, .is-h5 h5, h6, .is-h6 b, strong
+  font-weight: 700
+
+h1, .is-h1
+  +font-size($h1)
+h2, .is-h2
+  +font-size($h2)
+h3, .is-h3
+  +font-size($h3)
+h4, .is-h4
+  +font-size($h4)
+h5, .is-h5
+  +font-size($h5)
+h6, .is-h6
+  +font-size($h6)
+
+.heading
+  color: $font-strong
+
+.heading-container
+  h1, .is-h1, h2, .is-h2, .is-h3, h3, .is-h4, h4, .is-h5 h5, h6, .is-h6
+    margin-bottom: $gutter / 4
+    border: none
+  span
+    display: block
+    +font-size($font-base)
+    color: $colour2
+
+.is-xlarge
+  +font-size($font-large * 1.75, 4.25)
+
+.is-large
+  +font-size($font-large)
+
+.is-medium
+  +font-size($font-medium)
+
+small, .is-small
+  +font-size($font-small)
+
+.is-highlighted
+  display: inline-block
+  padding: $gutter / 4 $gutter / 2
+  background: $colour3
+  color: $white
+
+p.note
+  display: block
+  margin: $gutter * 2 0
+  padding: $gutter * 1.5 $gutter
+  +font-size($font-medium)
+  color: $colour1
+  background: $grey-lighter
+
+i 
+  font-style: italic
+
+s, strike, del
+  text-decoration: line-through
+
+u
+  text-decoration: underline
+
+a
+  color: $color1
+  text-decoration: none
+  border-bottom: 2px solid $grey-light
+  padding: 1px
+  
+  &:hover
+    border-color: $color1
+    +transition(border-color $speed $easing)
+
+.is-uppercase
+  text-transform: uppercase
+
+.has-shadow
+  text-shadow: 2px 2px 1px rgba($black, 0.9)
+
+//  Block level typographic elements have a margin bottom equalling the gutter size,
+//  they can be modified to have half or double that, or none at all.
+
+p, ul, ol, h1, h2, h3, h4, h5, h6, blockquote, pre
+  margin-bottom: $gutter / 2
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+// [_2_] LISTS
+
+//  By default lists are styled with discs for <ul> and numericals for <ol>. These
+//  can be overwritten with the 'list--unstyled' and 'list--inline' modifiers, both
+//  of which remove the list style type altogether.
+
+ul, ol
+  margin-left: 30px
+  
+  li
+    margin-bottom: $gutter / 2
+  
+  &.list--unstyled
+    list-style: none
+    margin-left: 0
+  
+  &.list--inline
+    list-style: none
+    margin-left: 0
+    
+    li
+      display: inline-block
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+// [_3_] QUOTES & BLOCKQUOTES
+
+//blockquote, q
+//  quotes: none
+//
+//blockquote:before, blockquote:after, q:before, q:after
+//  content: ''
+//  content: none
+
+blockquote
+  margin-left: 0
+  padding-left: $gutter
+  border-left: 2px solid $colour1
+  +font-size($font-large)
+
+cite
+  color: $grey
+  +font-size($font-base)
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_4_] PREFORMATTED TEXT
+
+code, pre
+  background: $code-background
+  color: $code
+  +font-size($font-small)
+  font-weight: normal
+  padding: 1px 2px 2px
+
+code
+  padding: 2px 5px
+
+pre
+  padding: 14px
+  max-width: 100%
+  overflow-x: scroll
+
+
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+
+//  [_5_] TYPOGRAPHIC EXTRAS
+
+//  <hr> isn't really a typographic element, but it's nice to have all the same.
+
+hr
+  margin: $gutter 33%
+  border: 0
+  background: $color1
+  height: 2px
+
+//  Controls the highlight color of text in the browser. Doesn't work everywhere.
+
+::selection
+  background: lighten($color1, 40)
+::-moz-selection
+  background: lighten($color1, 40)

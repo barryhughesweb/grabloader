@@ -1,0 +1,460 @@
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** *****               SECTION               ***** ***** *****  //
+//  ***** ***** *****                                     ***** ***** *****  //
+//  ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** ***** *****  //
+
+.has-box-shadow
+  position: relative
+  background-color: $white
+  border-bottom: 4px $white solid
+  &:before, &:after
+    content: ""
+    position: absolute
+    z-index: -1
+    -webkit-box-shadow: 0 0 20px rgba($grey-dark, 0.8)
+    box-shadow: 0 0 20px rgba($grey-dark, 0.8)
+    bottom: 0px
+    left: 5%
+    right: 5%
+    width: 90%
+    height: 50%
+    -moz-border-radius: 100%
+    border-radius: 100%
+
+// Content
+
+section#content
+  .content-cta
+    height: 130px
+    width: 100%
+    font-size: 1.8rem
+    +tablet
+      font-size: 1.4rem
+    +desktop
+      font-size: 1.8rem
+    span
+      +absolute(left 0 bottom $gutter / 2)
+      width: 100%
+      padding: $gutter / 4
+      background: rgba($colour3, 0.8)
+      color: $white
+      font-weight: 700
+  .ctagreen
+    padding: $gutter * 1.5
+    background-color: darken($success, 25%)
+    font-weight: 700
+    text-align: center
+    color: $success
+    font-size: 2.4rem
+    +tablet
+      font-size: 1.8rem
+    +desktop
+      font-size: 2.4rem
+
+// USP's
+
+section#usps
+  .usp
+    img.icon
+      width: 45px
+      height: 45px
+      padding: $gutter / 4
+      background-color: $colour3
+      border: 4px $colour3 solid
+      border-radius: 50%
+
+// Aggregates Feed
+
+section#feed--aggregates
+  background-color: $white
+  background-image: url('#{$dir-img}crisscross.png')
+  background-repeat: repeat
+  position: relative
+  .grid-item
+    height: 200px
+    a
+      border-bottom: 4px $colour3 solid
+      +transition(border-color $speed $easing)
+      &:hover
+        border-color: $colour2
+        +transition(border $speed $easing)
+    a, .aggregate
+      width: 100%
+      height: 100%
+      .aggregate-content
+        +center
+        +font-size($font-large * 1.5, 4)
+        
+.page-template-page-aggregates
+  section#feed--aggregates
+    background-color: $white
+    background-image: url('#{$dir-img}crisscross.png')
+    background-repeat: repeat
+    position: relative
+    .grid-item
+      height: auto
+      .aggregate-content
+        top: 0!important
+        transform: none
+        -webkit-transform: none
+        height: 100px
+        font-size: 2.4rem
+        line-height: 1.2
+        border-radius: 5px 5px 0 0
+        +desktop
+          font-size: 2.2rem
+        +mac
+          font-size: 2.6rem
+        .box-content
+          position: relative
+          top: 50%
+          -webkit-transform: translateY(-50%)
+          -ms-transform: translateY(-50%)
+          transform: translateY(-50%)
+        
+      
+      .half_full_image
+        height: 200px
+      .aggregate-text
+        background: $gray-lighter
+        height: auto
+        padding: $gutter $gutter $gutter*4 $gutter
+        position: relative
+        border-bottom: 2px solid $gray
+        border-radius: 0 0 5px 5px
+        +tablet
+          height: 475px
+        +from(1100px)
+          height: 425px
+        +from(1190px)
+          height: 415px
+        +from(1300px)
+          height: 375px
+        p::nth-last-child()
+          margin: 0
+        ul
+          margin-bottom: 0
+          margin-top: $gutter/2
+        .aggregate-button
+          position: absolute
+          bottom: $gutter
+          width: 100%
+          padding-right: $gutter*2
+          .aggregate-button-inside
+            width: 100%
+            text-align: center
+            .button
+              background: $color3
+              border-bottom: 2px solid $color1
+              transition: all 0.3s ease 0s
+              margin: 0 auto
+              width: auto
+              padding: $gutter/2 $gutter
+              &:hover
+                background: $color1
+                color: $white
+        
+// Reviews Feed
+
+section#feed--reviews
+  border-top: 4px $colour3 solid
+  background-image: url('#{$dir-img}aggregate.jpg')
+  q
+    &:before, &:after
+      quotes: none
+  img
+    +inline-block
+    width: 24px !important
+    height: 24px !important
+  .before
+    margin-right: $gutter
+    margin-bottom: 0
+  .after
+    margin-left: $gutter
+    margin-bottom: 0
+
+// Map Sections
+
+section#map--coverage
+  iframe
+    display: block
+    width: 100%
+    height: 325px
+    +tablet
+      height: 400px
+
+iframe.map--directions
+  display: block
+  width: 100%
+  height: 255px
+  background: $grey-lighter
+  border-top: 2px $grey solid
+  border-right: 2px $grey solid
+  border-left: 2px $grey solid
+
+iframe.map--premises
+  width: 100%
+  height: 325px
+  padding: $gutter / 3
+  border: 2px $grey solid
+
+.premises-address
+  list-style-type: none
+  margin: 0
+
+.half_full_image
+  background-position: center center
+  background-size: cover
+  height: 255px
+  +desktop
+    height: 325px
+  img
+    width: 100%
+    height: 100%
+    opacity: 0
+
+// Small Slider
+
+.overlay-list
+  color: $white
+  .list
+    padding: $gutter $gutter $gutter / 2 $gutter
+  ul
+    list-style-type: none
+    margin: 0
+    li
+      +svg(_library/tick--white)
+      background-size: 21px 21px
+      background-position: 0 50%
+      background-repeat: no-repeat
+      color: $white
+
+// List Section
+
+section#list
+  ul
+    list-style-type: none
+    li
+      +svg(icon--grabber)
+      background-size: 20px 20px
+      background-position: 0 49%
+      background-repeat: no-repeat
+      font-size: 2rem
+      +tablet
+        font-size: 1.8rem
+      +desktop
+        font-size: 2rem
+
+.info
+  +font-size($font-medium)
+  +svg(_library/info)
+  background-color: $colour1
+  background-position: $gutter / 2 50%
+  background-size: 30px 30px
+  background-repeat: no-repeat
+  color: $white
+
+// Note
+
+section.note
+  background-color: $grey-lighter
+  color: $grey
+
+// Services
+
+.is-info
+  color: darken($blue, 25%)
+  +font-size($font-medium)
+  +svg(_library/info)
+  background-position: $gutter / 2 50%
+  background-size: 45px 45px
+  background-repeat: no-repeat
+
+#lightbox
+  .grid-item
+    a
+      display: block
+      height: 225px
+      border: none
+      span
+        display: block
+        +absolute(top 0 left 0)
+        opacity: 0
+        width: 100%
+        height: 225px
+        background-color: rgba($white, 0.8)
+        +svg(_library/magnify)
+        background-position: 50% 50%
+        background-size: 35px 35px
+        background-repeat: no-repeat
+        +transition(opacity $speed $easing)
+        &:hover
+          opacity: 1
+          +transition(opacity $speed $easing)
+  .banner
+    +font-size($font-medium)
+    color: $white
+    a
+      color: $white
+      border: none
+
+section#other-services
+  .content
+    background-image: -webkit-gradient( linear, right bottom, left top, color-stop(0.55, rgba(0, 0, 0, 0.6)), color-stop(1, rgb(0, 0, 0)))
+    background-image: -o-linear-gradient(left top, rgba(0, 0, 0, 0.6) 55%, rgb(0, 0, 0) 100%)
+    background-image: -moz-linear-gradient(left top, rgba(0, 0, 0, 0.6) 55%, rgb(0, 0, 0) 100%)
+    background-image: -webkit-linear-gradient(left top, rgba(0, 0, 0, 0.6) 55%, rgb(0, 0, 0) 100%)
+    background-image: -ms-linear-gradient(left top, rgba(0, 0, 0, 0.6) 55%, rgb(0, 0, 0) 100%)
+    background-image: linear-gradient(to left top, rgba(0, 0, 0, 0.6) 55%, rgb(0, 0, 0) 100%)
+    color: $white
+    .items
+      margin: $gutter * 2 0
+      +tablet
+        margin: 0
+    .icon
+      float: left
+      width: 24px
+      height: 24px
+      margin: 0 $gutter / 2 0 0
+
+// Team Members
+
+section#team-members
+  .team-member
+    img
+      @extend .alignleft
+      border: 2px $colour1 solid
+      padding: $gutter / 3
+
+// Reviews
+
+section#reviews
+  blockquote
+    q
+      display: block
+
+// Custom Post Type Feeds
+
+#feed--case-studies
+  background-color: $grey-lighter
+  .images
+    width: 100%
+    img
+      display: block
+      width: 100%
+      margin-bottom: 0px
+
+// Affiliations
+
+section#affiliations
+  border-top: 1px $grey-light solid
+
+// Advice Centre
+
+section#advicecentre
+  color: $white
+  h2
+    +font-size($font-large * 2.5, 5.75)
+  a.telephone
+    display: block
+    margin-bottom: $gutter
+    padding: $gutter / 2 $gutter / 2 $gutter / 2 $gutter * 1.5
+    +svg(_library/phone--white)
+    background-size: 26px
+    background-position: 26px 50%
+    background-repeat: no-repeat
+    background-color: $colour3
+    text-align: center
+    @extend .is-xlarge
+    color: $white
+    font-weight: 700
+    border: none
+    +transition(all $speed $easing)
+    &:hover
+      background-color: darken($colour3, 15%)
+      +transition(all $speed $easing)
+    +tablet
+      font-size: 2rem
+    +desktop
+      font-size: 3rem
+    +mac
+      font-size: 3.4rem
+  .bordered
+    border: 2px $white solid
+    
+    
+section#services--feed, section#services--feed--additional
+  .service-content
+    border: 4px $color1 solid
+    img.icon
+      position: absolute
+      top: 0
+      left: 50%
+      width: 66px
+      height: 66px
+      margin: -33px 0 0 -33px
+      padding: 12px
+      background-color: $color1
+      border: 4px $white solid
+      border-radius: 50%
+    img
+      display: block
+      width: 100%
+      margin: 0
+    .content
+      color: $font-color
+      padding: $gutter $gutter/2
+      +tablet
+        padding: 15px $gutter/2
+      .is-h3
+        line-height: 1.2
+        font-weight: bold
+        margin-bottom: $gutter
+        padding: 0 $gutter
+        font-size: 2rem
+        +from(375px)
+          padding: 0 $gutter*2
+        +tablet
+          font-size: 1.2rem
+          padding: 0
+        +desktop
+          font-size: 2.4rem
+      h3
+        font-size: 2rem
+        line-height: 1.2
+        +tablet
+          font-size: 1.6rem
+        +desktop
+          font-size: 2rem
+        +from(1290px)
+          font-size: 2.2rem
+      p
+        line-height: 1.2
+        color: $gray-darker
+        +tablet
+          +font-size(1.2)
+        +desktop
+          +font-size(1.3)
+      b
+        font-size: 1.6rem
+        color: $gray-darker
+  .service_marg_bot
+    margin-bottom: $gutter * 2
+    +tablet
+      margin-bottom: 0
+    
+.single-areas
+  #content
+    blockquote
+      margin: $gutter 0
+    aside
+      .grid-item
+        padding-left: 0
+        padding-bottom: $gutter
+        +tablet
+          padding-left: $gutter
+        
+.page-template-page-contact
+  .button
+    padding: $gutter/2 $gutter
